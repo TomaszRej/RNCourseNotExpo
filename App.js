@@ -5,6 +5,7 @@ import FindPlaceScreen from "./src/screens/FindPlace/FindPlace";
 import configureStore from "./src/store/configureStore";
 import {Provider} from 'react-redux';
 import PlaceDetailScreen from "./src/screens/PlaceDetail/PlaceDetail";
+import SideDrawer from "./src/screens/SideDrawer/SideDrawer";
 
 const store = configureStore();
 //Register Screens
@@ -16,6 +17,8 @@ Navigation.registerComponent('awasome-places.FindPlaceScreen',
     () => FindPlaceScreen, store, Provider);
 Navigation.registerComponent('awasome-places.PlaceDetailScreen',
     () => PlaceDetailScreen, store, Provider);
+
+Navigation.registerComponent('awasome-places.SideDrawer', () => SideDrawer);
 //Start an App
 Navigation.startSingleScreenApp({
     screen: {
@@ -23,6 +26,7 @@ Navigation.startSingleScreenApp({
         title: 'Login'
     }
 });
+
 
 
 // tak bylo przed dodaniem navigacji
