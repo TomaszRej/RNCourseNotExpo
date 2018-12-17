@@ -1,14 +1,40 @@
 import React from 'react';
 import {Button, Image, StyleSheet, View} from "react-native";
-import imagePlaceholder from "../../../assets/beautiful-place.jpg";
+import ImagePicker from 'react-native-image-picker';
 
 class PickImage extends React.Component {
+
+    state = {
+        pickedImage: null
+    };
+
+    pickImageHandler = () => {
+
+        //noData: true jesli nie chcemy uzywac base64 co zajmuje zasoby
+        ImagePicker.showImagePicker({title: "Pick an Image"},res=>{
+            if(res.didCancel){
+                console.log("user cancelled");
+            }else if (res.error){
+                console.log('Error', res.error);
+            } else {
+                this.setState({
+                    pickedImage: { uri: res.uri}
+                });
+
+                this.props.onImagePicked({uri: res.uri, base64: res.data})
+            }
+        });
+    };
+
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.placeholder}><Image source={imagePlaceholder} style={styles.imagePreview}/></View>
+                <View style={styles.placeholder}><Image source={this.state.pickedImage} style={styles.imagePreview}/>
+                </View>
                 <View style={styles.button}>
-                    <Button title='Pick Image'/>
+                    <Button title='Pick Image'
+                    onPress={this.pickImageHandler}
+                    />
                 </View>
             </View>
         );

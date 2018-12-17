@@ -1,15 +1,33 @@
 import React from 'react';
-import {TouchableHighlight, Text, View, StyleSheet } from 'react-native';
+import {TouchableOpacity, TouchableNativeFeedback, Text, View, StyleSheet, Platform} from 'react-native';
 
-const buttonWithBackground = props => (
-    <TouchableHighlight onPress={props.onPress}>
-        <View style={[styles.button, {backgroundColor: props.color}]}>
-            <Text>
-                {props.children}
-            </Text>
-        </View>
-    </TouchableHighlight>
-);
+const buttonWithBackground = props => {
+
+    const content = <View style={[styles.button, {backgroundColor: props.color},props.disabled ? styles.disabled : null]}>
+        <Text style={props.disabled ? styles.disabledText : null }>
+            {props.children}
+        </Text>
+    </View>;
+    if(props.disabled){
+        return content;
+    }
+
+    if (Platform.OS === 'android') {
+        return (
+            <TouchableNativeFeedback>
+                {content}
+            </TouchableNativeFeedback>
+        )
+
+    }
+    return (
+        <TouchableOpacity onPress={props.onPress}>
+            {content}
+        </TouchableOpacity>
+    );
+
+
+};
 
 const styles = StyleSheet.create({
     button: {
@@ -19,7 +37,15 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black'
 
+    },
+    disabled: {
+        backgroundColor: '#eee',
+        color: '#aaa'
+
+    },
+    disabledText: {
+        borderColor: '#aaa'
     }
 });
 
-export  default  buttonWithBackground;
+export default buttonWithBackground;
