@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rncoursenotexpo",
+  "private_key_id": "8f0748567af52681721edcaeec4fed30b6454db7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCx0/iNaPC9DMHB\nXULJCdPhvaXRiJLc9eJ4ZYwT99R4IvfSw5HvSEq1BybVF1dIjMrybghPXM9chB86\nB0qctfKBxcGtqR0yYJ7JRamKrvuDsv4Lyaime1Bh+dtIyKVKsku+jGMB5h+kvIim\nU4WyozNMVbD9GGgNO5fN9/dLHuJdKcaLD75o5HzzbiWWiKYvRUm2kCnfju88iEnJ\nItAYHnPS6ycErxWghbtg5vwCS0nvBe/vDZhtHcL1uY5rINPjuT1sP4kag51nGOu1\nnEiamCz8w6QXN9SWFhEV1aVRPCEzVmllQexYToerPdop8y3B4gjBQaG+TmoL/A/3\ndEG5mkPjAgMBAAECggEAAOhGCzqqEtzcfhDsmLHYEK7fQ3zPv/FT/6OR7I1ji5kR\ndiyuqWXPQoqU4IaJk9scC9LrvttNN4098p92v00tbuPrpegIJH1Ge/nMyR2D6BZZ\nLBl0nOkmxrCVcIkXZFl7xP3QsB9oYrGjQmQl73yNh8KP3Iq6pS6jqFavKt3M75Dl\n+TCYInQr6q9Lq6Ja/58zdwSucYCdCXCWkG0GlHQEdNkLKPpuq3akGEFQLR1gYnQO\nUUwc2AbEGf5CJaiPderHzPKL8J0OT8KrmvlxYglraczxIGecVLdrH63nOBH9f6PZ\nx7LAjHGP5E9+ExTo6R6zKGSQDYUuSEQtQB2SFxW8+QKBgQDioU5x2d6hsVeHj8O1\n1EKr0E6IS8DVVjv733l1Bm/kiubV/CNLhXNVKgbXqaIeGRTPMtd0HxglF0CXujtS\nUG6blWqllbm4VoYjbAWFkMnsjKHaijsEnzB9BpmAKIntuhEHP1OchZClSbolo712\nEENBs4umyEM0PEg5bPvDJ0CDPwKBgQDI35p6GomMRv2NWuer4eUa0QCdfa1qexvV\neDKgbfpr/aqtl/a1/GMfvgNSuCvhd/e47x4QpXrFZIcbnt06qHwFwBHALd5UGPMk\njChrsFMPY8mQsOBz1/5+bjSvVoeoibqMt+1MYB0XEXtIjKQV5Z/6dBnfN//vvetU\nhV3G6w3qXQKBgFsMBPDWX4vELG8Iwc6V5OcTu8kj7eeHSnfpEumB2YgOiahkMGXR\nykDnrnIL81Z2KxcGzOoY5+FW0xthtR1ftOAKihrV6RP2ptMqPZmoTocbBJdAu28i\n6R8BfL+xCaCZBOhNd7DFNBRDZ2Zhvubkp7CIik1J3T3qDfYMI6UGavOPAoGAUPwF\nVbEZP1rnonPB70Q1j+gvbU9b+RAFGr1I+/EbAyrUAwS/TIOimwuKX3EtD8vELeUJ\npABzTN3IstQLsTh4OAFFpstXVWRxsoxnR3NhKVU70H/fHhU431QjHYWvT72nXlBQ\n9XfSgphjsc4x4Togk2L3g00afFd/ZyYVtrrRc2kCgYAGFk2q1ZTCd3N0Kn5Fu5QJ\nCJfQnOgUK8dWJ9tRHIfoI+JWKs8Q1uiHzzvABFf6zASMHM0WhdQhdwZyfpUHTxc8\nxcT42WK77fNHGsS0Pb6EPwerFfput9PKpHKvVU+oG0u0DYBA+Jg4gx6OK4w0Hvl+\n7q1DI4qSonnDNg84HwPN+Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-9b0ny@rncoursenotexpo.iam.gserviceaccount.com",
+  "client_id": "113953829587524304529",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-9b0ny%40rncoursenotexpo.iam.gserviceaccount.com"
+}

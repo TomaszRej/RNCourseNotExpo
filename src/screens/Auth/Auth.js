@@ -9,7 +9,8 @@ import {
     Dimensions,
     KeyboardAvoidingView,
     Keyboard,
-    TouchableWithoutFeedback
+    TouchableWithoutFeedback,
+    ActivityIndicator
 } from "react-native";
 
 import startMainTabs from "../MainTabs/startMainTabs";
@@ -137,6 +138,18 @@ class AuthScreen extends Component {
     render() {
         let headingText = null;
         let confirmPasswordControl = null;
+        let submitButton = (
+            <ButtonWithBackground
+                color="#29aaf4"
+                onPress={this.loginHandler}
+                disabled={!this.state.controls.email.valid ||
+                !this.state.controls.password.valid ||
+                !this.state.controls.confirmPassword.valid && this.state.authMode === 'signup'}
+            >
+                Submit
+            </ButtonWithBackground>
+        );
+
 
 
         if (this.state.viewMode === "portrait") {
@@ -167,6 +180,10 @@ class AuthScreen extends Component {
                     />
                 </View>
             );
+        }
+
+        if(this.props.isLoading){
+            submitButton = <ActivityIndicator/>
         }
 
         return (
@@ -218,15 +235,7 @@ class AuthScreen extends Component {
                             </View>
                         </View>
                     </TouchableWithoutFeedback>
-                        <ButtonWithBackground
-                            color="#29aaf4"
-                            onPress={this.loginHandler}
-                            disabled={!this.state.controls.email.valid ||
-                            !this.state.controls.password.valid ||
-                            !this.state.controls.confirmPassword.valid && this.state.authMode === 'signup'}
-                        >
-                            Submit
-                        </ButtonWithBackground>
+                    {submitButton}
 
                 </KeyboardAvoidingView>
 
@@ -267,11 +276,15 @@ const styles = StyleSheet.create({
         width: "100%"
     }
 });
-
+const mapStateToProps = state => {
+    return{
+        isLoading: state.ui.isLoading
+    }
+};
 const mapDispatchToProps = dispatch => {
     return {
         onLogin: (authData) => dispatch(tryAuth(authData))
     }
 };
 
-export default connect(null, mapDispatchToProps)(AuthScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthScreen);
